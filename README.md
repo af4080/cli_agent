@@ -75,14 +75,6 @@ https://docs.google.com/spreadsheets/d/1oNPZYx_VtNqTt2zeZf2HtFHUkatr1NtvUaIiEm50
 3. Set up your Groq API Key.
 4. Run the application: `python app.py`
 
----
+---*
 
-### מה את צריכה לעשות עכשיו?
-
-1. תפתחי את הקובץ `README.md` ב-GitHub (או ב-VS Code).
-2. תדביקי את הטקסט למעלה.
-3. **חשוב:** במקום שכתוב `YOUR_LINK_HERE`, תדביקי את הקישור האמיתי ל-Google Sheet שלך.
-4. שמרי ותעשי **Push**.
-
-**זהו! את מוכנה להגשה. האם תרצי שאבדוק לך משהו אחרון בקוד עצמו?**
 
