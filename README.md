@@ -43,7 +43,9 @@ The development followed a rigorous testing and refinement process across three 
 
 All test cases, scores (1/0), and iteration comparisons are documented in the following Google Sheet:
 
- **[Link to Google Sheets - Experimentation Log](https://www.google.com/search?q=YOUR_LINK_HERE)**
+ **[Link to Google Sheets - Experimentation Log](
+https://docs.google.com/spreadsheets/d/1oNPZYx_VtNqTt2zeZf2HtFHUkatr1NtvUaIiEm50zY4/edit?usp=sharing
+)**
 
 ---
 
@@ -83,3 +85,4 @@ All test cases, scores (1/0), and iteration comparisons are documented in the fo
 4. שמרי ותעשי **Push**.
 
 **זהו! את מוכנה להגשה. האם תרצי שאבדוק לך משהו אחרון בקוד עצמו?**
+
