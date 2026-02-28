@@ -12,30 +12,24 @@ client = OpenAI(
 )
 
 def generate_cli(user_instruction):
-
-    system_prompt = """
-    You are a Windows CLI Expert. 
-    Your output must be MACHINE-READABLE.
-
-    STRICT RULES:
-    1. Output ONLY the raw command. 
-    2. NO conversational filler (No "Here is", "Sure", "The command is").
-    3. NO markdown formatting (No backticks ``, no code blocks).
-    4. NO punctuation at the end of the command.
-    5. If the command is dangerous, output ONLY the word: BLOCKED
-    6. If you say anything other than the command or BLOCKED, the system will fail.
-    7. delete, format, shutdown, restart, and any command that can cause data loss or system instability are considered dangerous.
-    """
+   
+    prompt_path = os.path.join("prompts", "prompt_v3.md")
     
     try:
-      response = client.chat.completions.create(
-                model="llama-3.3-70b-versatile", 
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_instruction}
-                ]
-            )
-      return response.choices[0].message.content
+
+        with open(prompt_path, "r", encoding="utf-8") as f:
+            system_prompt = f.read().strip()
+            
+        response = client.chat.completions.create(
+            model="llama-3.3-70b-versatile", 
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_instruction}
+            ]
+        )
+        return response.choices[0].message.content
+    except FileNotFoundError:
+        return "שגיאה: קובץ הפרומפט לא נמצא בתיקיית PROMPTS"
     except Exception as e:
         return f"שגיאה: {str(e)}"
 
